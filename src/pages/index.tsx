@@ -127,7 +127,7 @@ export default function Home({ latestEpisodes ,allEpisodes }: HomeProps) {
        publishedAt: format(parseISO(episode.published_at), 'd MMM yy', { locale: ptBR }),
        duration: Number(episode.file.duration),
        durationAsString: convertDurationToTimeString(Number(episode.file.duration)),
-       utl: episode.file.url
+       utl: episode.file.url,
      }
    })
 
@@ -141,4 +141,4 @@ export default function Home({ latestEpisodes ,allEpisodes }: HomeProps) {
      },
      revalidate: 60 * 60 * 8,
    }
- }
+}
